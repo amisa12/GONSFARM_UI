@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GONS FARM</title>
+</head>
+<body class="container">
+<div class="Jumbo-tron text-center">
+<center>
+<h1>GONS FARM</h1>
+<h5>We provide banks with a solution that will help them give farmers loans to enable them increase their farm input through better seeds and fertilizers as well as effective pesticides</h5>
+<h6>Apply Today</h6>
+
+
+
+<a href="/">Home</a> /
+<a href="/registration">Registration</a> /
+<a href="/search">Search</a> /
+<a href="">About Us</a> /
+<a href="">Contact Us</a> /
+<a href="">Request Our Services Today</a>
+</center>
+<fieldset>
+    <legend>Search Farmer</legend>
+
+    <form action="/search" method="post">
+        <div class="form-group">
+            <input type="text" name="id_number" placeholder="Enter Farmer ID Number">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="SEARCH RECORDS">
+        </div>
+    </form>
+</fieldset>
+
+    <table border="1" width="100%">
+    {% for row in data %}
+       <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+       </tr>
+    {% endfor %}
+</table>
+
+</div>
+</div>
+<p> </p>
+<form method="get" action="http://127.0.0.1:5000/visualize">
+    <button type="submit">Visualize farmer's data</button>
+</form>
+</body>
+</html>
